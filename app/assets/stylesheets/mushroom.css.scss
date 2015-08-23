@@ -1,0 +1,122 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.flex-columns {
+  display: flex;
+}
+
+.flex-columns .flexbox {
+  margin: 0 -2em 0 0;
+}
+
+.flexbox {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.myshrum {
+  position: relative;
+  margin-bottom: 0.2em;
+}
+
+.myshrum.tiny {
+  width: 3em;
+  height: 3em;
+}
+
+.myshrum.tiny .cap {
+  width: 3em;
+  height: 2.5em;
+  border-top-left-radius: 2.5em;
+  border-top-right-radius: 2.5em;
+  border-bottom-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  box-shadow: inset 0 1.25em 0.25em #C70000;
+}
+
+.myshrum.tiny .cap::after {
+  box-shadow: -2em 0.5em white, 2em 0.5em white;
+  height: 1.5em;
+  top: 0.125em;
+  left: 0.625em;
+  width: 1.75em;
+}
+
+.myshrum.tiny .cap.red {
+  box-shadow: inset 0 1.25em 0.25em red;
+}
+
+.myshrum.tiny .stalk {
+  height: 1em;
+  border-bottom-right-radius: 0.75em;
+  border-bottom-left-radius: 0.75em;
+  box-shadow: inset 0.125em -0.0625em 0.125em #dcdc85, inset 0 0.25em 0.125em #dcdc85;
+  top: 2em;
+  left: 0.5em;
+  width: 2em;
+}
+
+.myshrum.tiny .stalk::after {
+  box-shadow: 0.4375em 0 ivory;
+  height: 0.1875em;
+  top: 0.15687em;
+  left: 0.71813em;
+  width: 0.125em;
+}
+
+.myshrum.tiny .stalk::before {
+  box-shadow: -0.4375em 0 black;
+  height: 0.5em;
+  right: 0.6875em;
+  bottom: 0.375em;
+  width: 0.1875em;
+}
+
+.myshrum .cap {
+  overflow: hidden;
+  position: absolute;
+}
+
+.myshrum .cap.red {
+  background-color: #C70000;
+}
+
+.myshrum .cap::after {
+  background-color: white;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+}
+
+.myshrum .stalk {
+  background-color: beige;
+  border-radius: 44% / 33%;
+  position: absolute;
+}
+
+.myshrum .stalk::after {
+  background-color: ivory;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+}
+
+.myshrum .stalk::before {
+  background-color: black;
+  border-radius: 50% / 25%;
+  content: '';
+  position: absolute;
+}

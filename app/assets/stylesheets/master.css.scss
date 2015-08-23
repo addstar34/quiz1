@@ -1,0 +1,32 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #d5e9f6;
+	font-family: "Arial";
+}
+
+.main_heading {
+	margin: 0px;
+	padding: 10px;
+	background-color: #c52f24;
+}
+
+.main_heading > h1 {
+	text-align: center;
+	margin: 0px;
+	color: #fff;
+}
+
+.main_heading > h1 > span {
+	color: #F27979;
+}
+
+article {
+	margin: 20px;
+}
+
+code {
+	background-color: #fff;
+	padding: 3px;
+	margin: 2px;
+}
