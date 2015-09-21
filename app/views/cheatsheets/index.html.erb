@@ -35,7 +35,7 @@
 	  <li>create the action_name view:</li>
 	  	<code>app/views/controller_name/action_name.html.erb</code>
 	  <li>at this point you will have a viewable homepage</li>
-	  <li>setup the mode<li>
+	  <li>setup the model<li>
 	  	<code>rails generate model model_name</code>
 	  <li>*model name will be the non plural form of the controller name</li>
 	  <li>this will create apps/models/model)name.rb, db/migrate/datetime_create_model_name.rb and a few other files</li>
@@ -45,5 +45,23 @@
 	  <li>you can view the database structure via db/schema.rb</li>
 	</ul>
   </p>
-
 </article>
+
+<h1>Comments</h1>
+
+<%= simple_form_for Comment.new do |f| %>
+	<%= f.input :saying %>
+	<%= f.input :name %>
+	<%= f.submit 'Submit Comment' %>
+<% end %>
+
+<br />
+<br />
+
+<% @comment.each do |comment| %>
+	<div style="background: white">
+		<h4><%= comment.saying %></h4>
+		<h6><em>- <%= comment.name %></em></h6>
+	</div>
+	<br />
+<% end %>
